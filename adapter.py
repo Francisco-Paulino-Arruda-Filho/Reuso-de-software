@@ -1,11 +1,11 @@
 class Alvo:
     def requisicao(self):
-        return "Resultado da requisição do Alvo"
+        return "Resultado da requisicao do Alvo"
 
 class Adpter:
     def requisicao_especifica(self):
         alvo = Alvo()
-        return f"Adaptação: (TRANSLATED) {alvo.requisicao()}"
+        return f"Adaptacao: (TRANSLATED) {alvo.requisicao()}"
     
 class Adaptador(Alvo, Adpter):
     def requisicao(self):
