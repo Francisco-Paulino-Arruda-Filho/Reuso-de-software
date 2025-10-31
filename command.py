@@ -65,3 +65,52 @@ def client_code() -> None:
 
 if __name__ == "__main__":    
     client_code()
+
+# Interface Command
+class Command(ABC):
+    @abstractmethod
+    def execute(self):
+        pass
+
+# Receiver
+class Editor:
+    def copy(self):
+        print("Copiando texto...")
+    
+    def paste(self):
+        print("Colando texto...")
+
+# Concrete Commands
+class CopyCommand(Command):
+    def __init__(self, editor):
+        self.editor = editor
+    
+    def execute(self):
+        self.editor.copy()
+
+class PasteCommand(Command):
+    def __init__(self, editor):
+        self.editor = editor
+    
+    def execute(self):
+        self.editor.paste()
+
+# Invoker
+class Button:
+    def __init__(self, command):
+        self.command = command
+    
+    def click(self):
+        self.command.execute()
+
+# Client code
+if __name__ == "__main__":
+    editor = Editor()
+    copy_command = CopyCommand(editor)
+    paste_command = PasteCommand(editor)
+
+    copy_button = Button(copy_command)
+    paste_button = Button(paste_command)
+
+    copy_button.click()  # Output: Copiando texto...
+    paste_button.click() # Output: Colando texto...
