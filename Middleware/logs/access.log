@@ -1,0 +1,2 @@
+{"timestamp":"2025-11-28T20:03:32.576Z","requestId":"0dc624c5-6841-47bf-a96b-d034215c1630","sessionId":null,"ip":"::ffff:127.0.0.1","method":"GET","url":"/","status":200,"responseTime":6,"params":{},"query":{},"body":{}}
+{"timestamp":"2025-11-28T20:03:32.649Z","requestId":"cf634af2-a263-4cec-a5c4-6ddf26f11eb8","sessionId":null,"ip":"::ffff:127.0.0.1","method":"GET","url":"/favicon.ico","status":404,"responseTime":4,"query":{},"body":{}}
